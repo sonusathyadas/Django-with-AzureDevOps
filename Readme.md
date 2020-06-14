@@ -1,4 +1,4 @@
-## CI/CD of Django application to Azure App Servcie on Linux using Azure DevOps
+# CI/CD of Django application to Azure App Servcie on Linux using Azure DevOps
 
 In this tutorial, we are trying to deploy out Django web application into Azure App Service on Linux using the Azure DevOps pipeline. For completing this tutorial you need the following prerequisites:
     *) Azure Subscription
