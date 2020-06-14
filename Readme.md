@@ -61,3 +61,28 @@ In this tutorial, we are trying to deploy out Django web application into Azure 
     git remote -v
     ```
 ### Create and configure Azure DevOps project
+1) Open Azure DevOps portal by navigating to (https://dev.azure.com)[https://dev.azure.com] and login to your Azure DevOps account.
+2) Create a new DevOps project.
+    ![Create project](/resources/image1.png)
+3) Open the `Repos` and copy the git commands for uploading an existing git repository.
+    ![upload repo](/resources/image2.png)
+4) Copy the commands and execute in the VS Code integrated terminal. This will add the Azure repos as the remote repository and push the code to it.
+    ![upload repo](/resources/image3.png)
+5) You will see the uploaded files in the Azure Repos.
+    ![upload repo](/resources/image4.png)
+6) Click on the `Pipelines` in the Azure DevOps portal and click on `Create pipeline` to create a new pipeline.
+    ![Create pipeline](/resources/image5.png)
+7) Select the `Azure Repos Git` as the code source.
+    ![Create pipeline](/resources/image6.png)
+8) Select your DevOps project and the repository
+    ![Create pipeline](/resources/image7.png)
+9) Choose `Python to Linux Web App on Azure` as the deployment target. This will popup the available subscriptions. Select the subscription and click `Continue`. You may need to authenticate yourself to continue with that subscription.
+    ![Create pipeline](/resources/image8.png)
+10) Select the App service web app name from the dropdownlist. You can select the App Service web app name that you have created above. Click on `Validate and configure` to continue.
+    ![Create pipeline](/resources/image9.png)
+11) This will generate the YAML file with the build and deploy configuration code.
+    ![Create pipeline](/resources/image10.png)
+12) Click on the `Save and Run` button to save the YAML file in the repository folder and execute the pipeline.
+    ![Create pipeline](/resources/image11.png)
+13) Once the deployment is completed, you can navigate to the App Service web app and browse the site. You will be able to see the Django application running on the App Service.
+    ![Create pipeline](/resources/image12.png)
